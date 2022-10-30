@@ -1,0 +1,452 @@
+/* menu */
+.container-menu {
+  position: fixed;
+  width: 100%;
+  height: 70px;
+  background: #A77C5B;
+  padding: 0px 20px;
+}
+
+.menu-navegacion {
+  max-width: 1200px;
+  margin: auto;
+  height: 100%;
+}
+
+nav {
+  height: 100%;
+}
+
+nav > ul {
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+nav ul li {
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+
+nav > ul > li > a {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding: 14px;
+  color: #fff;
+  justify-content: center;
+  text-transform: uppercase;
+  font-size: 14px;
+  transition: all 300ms ease;
+  text-decoration: none;
+  list-style: none;
+}
+
+nav > ul > li > a:hover {
+  transform: scale(1.1);
+  background: #C3906A;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+}
+
+/* SubMenu */
+nav ul li ul {
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  background: #A77C5B;
+  position: absolute;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+  top: 105px;
+  left: 100px;
+  padding: 14px 0px;
+  visibility: hidden;
+  opacity: 0;
+  z-index: 10;
+  transition: all 300ms ease;
+}
+
+nav ul li:hover ul {
+  visibility: visible;
+  opacity: 1;
+  left: 100px;
+  top: 70px;
+}
+
+nav ul li ul::before {
+  content: "";
+  width: 0;
+  height: 0;
+  border-left: 12px solid transparent;
+  border-right: 12px solid transparent;
+  border-bottom: 12px solid #A77C5B;
+  position: absolute;
+  top: -12px;
+  left: 115px;
+}
+
+nav ul li ul li a {
+  display: block;
+  color: #fff;
+  padding: 6px;
+  padding-left: 14px;
+  margin-top: 10px;
+  font-size: 14px;
+  text-transform: uppercase;
+  transition: all 300ms ease;
+  text-decoration: none;
+  list-style: none;
+}
+
+nav ul li ul li a:hover {
+  background: #8B674C;
+  transform: scale(1.1);
+  padding-left: 30px;
+  font-size: 14px;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+}
+
+body {
+  font-family: "Lora", serif;
+}
+
+/* Contenido */
+.texto {
+  width: 100%;
+  overflow: hidden;
+  font-size: 40px;
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.texto {
+  width: 100%;
+  overflow: hidden;
+  font-size: 40px;
+  background: rgba(255, 255, 255, 0.5);
+}
+
+/* Index */
+.subtitulo {
+  /*     font-family: 'Merriweather', serif;
+      text-align: center;
+      font-weight: 300px;
+      color: #8B674C;
+      font-size: 100px; */
+  font-family: "Merriweather", serif;
+  text-align: center;
+  font-weight: 300px;
+  color: #8B674C;
+  font-size: 100px;
+  padding-bottom: 415px;
+}
+
+.contenedor-falta-ideas {
+  background-image: url(../img/pensar.jpg);
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+.contenedor-idea-pagina {
+  background-image: url(../img/idea.jpg);
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+.contenedor-planear-implementacion {
+  background-image: url(../img/planear.jpg);
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+.contenedor-planear-implementacion ul {
+  font-size: 40px;
+  display: flex;
+  width: 80%;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-content: space-between;
+  justify-content: space-between;
+}
+.contenedor-planear-implementacion li {
+  display: flex;
+  align-items: center;
+  flex-direction: row-reverse;
+  justify-content: space-around;
+  align-content: stretch;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.contenedor-planear-implementacion li a {
+  display: flex;
+  align-items: center;
+  padding: 14px;
+  color: #fff;
+  width: 90%;
+  justify-content: center;
+  text-transform: uppercase;
+  font-size: 30px;
+  transition: all 300ms ease;
+}
+.contenedor-planear-implementacion li :hover {
+  transform: scale(1.1);
+  background: rgba(255, 255, 255, 0.5);
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+}
+
+.contenedor-planear-implementacion ul li {
+  display: flex;
+  align-items: center;
+  flex-direction: row-reverse;
+  justify-content: space-around;
+  align-content: stretch;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+/* Fin Index */
+/* pages */
+.contenedor img {
+  width: 50%;
+}
+
+.header-page {
+  height: 50vh;
+  background-image: linear-gradient(to top, rgba(199, 144, 129, 0.5) 0%, rgba(223, 165, 121, 0.5) 100%), url(../img/idntkwptodo.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-decoration: none;
+  list-style: none;
+  background-attachment: fixed;
+  background-position: center;
+}
+
+.contenedor-page {
+  /* div conceptos */
+  /* GRID GALERia */
+}
+.contenedor-page p {
+  color: black;
+  margin-bottom: 20px;
+  font-size: 25px;
+  padding: 20px;
+  color: black;
+  margin-bottom: 20px;
+}
+.contenedor-page h2 {
+  text-transform: uppercase;
+  width: 100%;
+  margin: auto;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  font-weight: 300;
+  padding: 20px;
+  color: black;
+  margin-bottom: 40px;
+  font-size: 50px;
+  background: #C3906A;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+}
+.contenedor-page h3 {
+  font-family: "Dancing Script", cursive;
+  text-align: center;
+  font-weight: 300;
+  color: black;
+  margin-bottom: 40px;
+  font-size: 80px;
+}
+.contenedor-page h4 {
+  text-transform: uppercase;
+  width: 100%;
+  margin: auto;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  font-weight: 300;
+}
+.contenedor-page .contenido,
+.contenedor-page .conceptos,
+.contenedor-page .filas-columnas,
+.contenedor-page .unidad-fr,
+.contenedor-page .filas-columnas-repetidas,
+.contenedor-page .lineas-nombradas,
+.contenedor-page .uso-de-grid,
+.contenedor-page .elementos {
+  padding-top: 5px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+.contenedor-page .conceptos ul {
+  list-style-type: square;
+  color: black;
+  margin-bottom: 20px;
+  font-size: 25px;
+}
+.contenedor-page .conceptos strong {
+  letter-spacing: -0.25px;
+  font-size: 1.45rem;
+}
+.contenedor-page .conceptos img {
+  width: 100%;
+}
+.contenedor-page #galeria .col-lg-4 {
+  margin: 0 !important;
+  padding: 5px;
+}
+.contenedor-page #galeria img {
+  width: 100%;
+  height: 600px;
+  background: rgba(255, 255, 255, 0.5);
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+}
+.contenedor-page #galeria img:hover {
+  border: 2px solid #fff;
+}
+
+.mb-3,
+.mb-2 {
+  color: black;
+  font-family: "Lora", serif;
+}
+.mb-3 button,
+.mb-2 button {
+  background-color: #C3906A;
+}
+.mb-3 button :hover,
+.mb-2 button :hover {
+  background-color: #C3906A;
+}
+
+/* Fondo de headear */
+header {
+  height: 100vh;
+  background-image: linear-gradient(to top, rgba(199, 144, 129, 0.5) 0%, rgba(223, 165, 121, 0.5) 100%), url(../img/idntkwptodo.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+}
+
+/* Texto de headear */
+.head {
+  padding: 0px;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  flex-direction: column;
+  color: #fff;
+}
+.head .copy {
+  width: 65%;
+  font-size: 29px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.head h1 {
+  width: 80%;
+  font-size: 87px;
+  margin-top: 201px;
+  font-family: "Dancing Script", cursive;
+}
+
+.pasos-github {
+  max-width: 1200px;
+  padding: 20px;
+  padding-bottom: 71px;
+  margin: auto;
+  margin-top: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.pasos-github h3 {
+  margin-top: 60px;
+  font-size: 1.5rem;
+}
+
+.box {
+  width: 460px;
+  position: relative;
+}
+
+.titulo {
+  width: 100%;
+  height: 220px;
+  background: #eff3f5;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.info {
+  width: 100%;
+  height: 170px;
+  color: #474747;
+  background: #eff3f5;
+  padding: 15px;
+  *margin-top: -200px;
+}
+.info p {
+  font-size: 14px;
+  margin-top: -60px;
+  display: -webkit-box;
+  display: -moz-inline-box;
+  display: box;
+  -webkit-box-orient: vertical;
+  -moz-box-orient: vertical;
+  box-orient: vertical;
+  -webkit-line-clamp: 10;
+  line-clamp: 10;
+  overflow: hidden;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  font-family: "Lora", serif;
+}
+
+.contenedor {
+  max-width: 1200px;
+  overflow: hidden;
+  margin: auto;
+  padding: 55px 0;
+}
+
+/*# sourceMappingURL=style.css.map */

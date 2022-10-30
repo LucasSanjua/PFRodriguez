@@ -1,0 +1,19 @@
+@use 'menu';
+@use 'body';
+@use 'header';
+@use 'box';
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: 'Lora', serif;
+}
+.contenedor{
+    
+    max-width: 1200px; 
+    overflow: hidden;
+    margin:auto;
+    padding: 55px 0;
+}

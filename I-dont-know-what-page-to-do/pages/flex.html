@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I dont know what page to do</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@500&family=Merriweather:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+</head>
+<body>
+    <header class="header-page">
+        
+        <!-- Inicio de  menu  -->
+        <div class="container-menu">
+        <nav class="menu-navegacion">
+            <ul>
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="#">Temas</a>
+                    <ul>
+                        <li><a href="grid.html">Grid</a></li>
+                        <li><a href="flex.html">Flex</a></li>
+                        <li><a href="gitandgithub.html">Git y GitHub</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        </div>
+    </header>
+    <!-- Inicio contenido -->
+    <main>
+        <div class="contenedor contenedor-page">
+            <div class="contenido">
+                <h1>Flexbox CSS</h1>
+                <p>Flex (también llamado flexbox) es un sistema de elementos flexibles que llega con la idea de una mecánica más potente, limpia y personalizable, en la que los elementos HTML se adaptan y colocan automáticamente y es más fácil personalizar los diseños de una página web. </p>
+                <p>Flex está especialmente diseñado para crear, mediante CSS, estructuras de una sóla dimensión.</p>
+                
+            </div>
+            <div class="elementos">
+                <h2>Elementos</h2>
+                <p>Flexbox es un módulo completo y no una propiedad única; algunos de ellos deben declararse en el contenedor (el elemento principal, que llamamos de flex container), mientras que otros deben declararse en los elementos secundarios (el flex ítems). Si el diseño "estándar" se basa en las direcciones block e inline, el diseño Flex se basa en direcciones de "flex flow". A continuación se muestra un diagrama de la especificación, que explica la idea central detrás del diseño Flex.</p>
+                <img src="../img/flex-elementos.png" alt="elementos de  flex">
+                <p>Los ítems se distribuirán en el diseño siguiendo el eje principal o transversal.</p>
+                <ul class="conceptos">
+                    <li><strong>Eje principal</strong>
+                    :   el eje principal de un flex container es el eje primario y a lo largo de él son insertados los flex ítems. Precaución: El eje principal no es necesariamente horizontal; Dependerá de la propiedad flex-direction (vea abajo).</li>
+                    <li><strong>Main-start | main-end</strong>
+                    : los flex ítems se insertan en el contenedor empezando por el lado start, dirigiéndose hacia el lado end.</li>
+                    <li><strong>Tamaño principal</strong>
+                    : El ancho o alto de un flex ítem, dependiendo de la dirección del contenedor, es el tamaño principal del ítem. La propiedad de tamaño principal de un flex ítem puede ser tanto width como height, dependiendo de cuál esté en la dirección principal.</li>
+                    <li><strong>Eje transversal</strong>
+                    : El eje perpendicular al eje principal se llama eje transversal. Su dirección depende de la dirección del eje principal.</li>
+                    <li><strong>Cross-start | cross-end</strong>
+                    : Líneas flex se llenan con ítems y se agregan al contenedor, comenzando desde el lado cross start del flex container hacia el lado cross end.</li>
+                    <li><strong>Cross size</strong>
+                    : El ancho o alto de un flex ítem, dependiendo de lo que haya en la dimensión transversal, es el cross size del ítem. La propiedad cross size puede ser el ancho o el alto del ítem, lo que se encuentre en la transversal.</li>
+                    <li><strong>Ejes o Axes</strong>
+                    :   son las dos direcciones básicas que existen en un Flex Container: main axis, o eje principal, y cross axis, o eje transversal.</li>
+                    <li><strong>Flex-container</strong>
+                    : Es el elemento que involucra su estructura. Tu defines que un elemento es un Flex Container con la propiedad display y valores flex o inline-flex.  </li>
+                    <li><strong>Flex-item</strong>
+                    : son elementos secundarios del flex container.</li>
+                </ul>
+                <img src="../img/html-flex-container.png" alt="codigo de html div container">
+            </div>
+                <h2>Propiedades del elemento principal</h2>
+                <img src="../img/container.svg" alt="container">
+                <p>Cuando usamos el Flexbox, es muy importante saber qué propiedades se declaran en el elemento principal (por ejemplo, una div que contendrá los elementos a alinear) y cuáles se declararán en los elementos secundarios. A continuación, se muestran las propiedades que deben declararse utilizando el elemento principal como selector (para alinear los elementos secundarios):</p>
+                <h3>Display</h3>
+                <p>Esta propiedad define un flex container; inline o block dependiendo de los valores pasados. Coloca todos los elementos secundarios directos en un contexto Flex.</p>
+                <p>Para activar el modo flex, utilizaremos sobre el elemento contenedor la propiedad display, y especificaremos el valor flex o inline-flex (dependiendo de como queramos que se comporte el contenedor):</p>
+                <ul>
+                    <li><strong>inline-flex</strong>
+                    :  Establece un contenedor en línea, similar a inline-block (ocupa solo el contenido).</li>
+                    <li><strong>flex</strong>
+                    :   Establece un contenedor en bloque, similar a block (ocupa todo el ancho del padre).</li>
+                </ul>
+                <h3>Flex-direction</h3>
+                <p>Establece el eje principal, definiendo así la dirección en la que los flex ítems están alineados en el flex container. Flexbox es (con la excepción de un wrapping opcional) un concepto de diseño unidireccional. Piensa en los flex ítems inicialmente posicionaids o en líneas horizontales o en columnas verticales.</p>
+                <img src="../img/Flex-direction.svg" alt="disposición de los ejes">
+                <p>Valores de flex-direction:</p>
+                <ul>
+                    <li><strong>row (estándar)</strong>
+                    :  de la izquierda a la derecha en ltr (left to right), de la derecha a la izquierda en rtl (right to left).</li>
+                    <li><strong>row-reverse</strong>
+                    :   de la derecha a la izquierda en ltr, de la izquierda a la derecha en rtl.</li>
+                    <li><strong>column</strong>
+                    :  mismo que row, pero de arriba a abajo.</li>
+                    <li><strong>column-reverse</strong>
+                    :   mismo que row-reverse pero de abajo hacia arriba.</li>
+                </ul>
+                <h3>flex-wrap</h3>
+                <p>Por estándar, los flex ítems todos intentarán encajarse en una sola línea. Con esta propiedad puedes modificar este comportamiento y permitir que los ítems pasen a la siguiente línea según sea necesario.</p>
+                <img src="../img/flex-wrap.svg" alt="Ilustración de flex">
+                <p>Valores de flex-wrap:</p>
+                <ul>
+                    <li><strong>nowrap (estándar)</strong>
+                    :todos los flex ítems estarán en una sola línea.</li>
+                    <li><strong>wrap</strong>
+                    :los flex ítems se dividirán en múltiples líneas, de arriba a abajo.</li>
+                    <li><strong>wrap-reverse</strong>
+                    : los flex ítems se dividirán en múltiples líneas de abajo hacia arriba.</li>
+                </ul>
+            </div>
+
+        </div>
+    </main>
+    
+</body>
+</html>

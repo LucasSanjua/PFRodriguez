@@ -1,0 +1,32 @@
+/* Fondo de headear */
+header{
+    height: 100vh;
+    background-image: linear-gradient(to top, rgba(199, 144, 129, 0.5) 0%, rgba(223, 165, 121, 0.5) 100%), url(../img/idntkwptodo.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+}
+/* Texto de headear */
+.head{
+    padding: 0px;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    flex-direction: column;
+    color: #fff;
+    .copy {
+        width: 65%;
+        font-size: 29px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+    h1{
+        width: 80%;
+        font-size: 87px;
+        margin-top: 201px;
+        font-family: 'Dancing Script', cursive;
+    }
+}

@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I dont know what page to do</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@500&family=Merriweather:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+</head>
+<body>
+    <header class="header-page">
+        
+        <!-- Inicio de  menu  -->
+        <div class="container-menu">
+        <nav class="menu-navegacion">
+            <ul>
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="#">Temas</a>
+                    <ul>
+                        <li><a href="grid.html">Grid</a></li>
+                        <li><a href="flex.html">Flex</a></li>
+                        <li><a href="gitandgithub.html">Git y GitHub</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        </div>
+    </header>
+    <!-- Inicio contenido -->
+    <main>
+        <div class="contenedor contenedor-page">
+            <div class="contenido">
+                <h1>Git & GitHub</h1>
+                <img src="../img/gitandGitHub.png" alt="iconos de git y GitHub">
+                <p>En este este apartado veremos que es <b>Git</b> y <b>GitHub</b> terminos los cuales al principio pensamos que es lo mismo pero ya veremos que no es asi.</p>
+                <div class="git conceptos">
+                    <h2>Git</h2>
+                    <p>Git es un Sistema de Control de Versiones Distribuido (DVCS) utilizado para guardar diferentes versiones de un archivo (o conjunto de archivos) para que cualquier versión sea recuperable cuando lo desee.</p>
+                    <p>Git también facilita el registro y comparación de diferentes versiones de un archivo. Esto significa que los detalles sobre qué cambió, quién cambió qué, o quién ha iniciado una propuesta, se pueden revisar en cualquier momento.</p>
+                    <p>¿Pero si Git es un Sistema de Control de Versiones Distribuido, qué significan exactamente esos términos?</p>
+                    <div class="SCVD">
+                        <h3>Sistema de Control de Versiones Distribuido</h3>
+                        <h4>Distribuido</h4>
+                        <p>El término "distribuido" significa que cuando le instruyes a Git que comparta el directorio de un proyecto, Git no sólo comparte la última versión del archivo. En cambio, distribuye cada versión que ha registrado para ese proyecto.</p>
+                        <p>Este sistema "distribuido" tiene un marcado contraste con otros sistemas de control de versiones. Ellos sólo comparten cualquier versión individual que un usuario haya explícitamente extraído desde la base de datos central/local.</p>
+                        <p>Entonces "distribuido" significa distribuir todas – no solo algunas seleccionadas – versiones de los archivos del proyecto que Git haya registrado. Pero ¿qué es exactamente un sistema de control de versiones?</p>
+                        <h4>Sistema de Control de Versiones</h4>
+                        <p>Un Sistema de Control de Versiones (VCS) se refiere al método utilizado para guardar las versiones de un archivo para referencia futura.</p>
+                        <p>De manera intuitiva muchas personas ya utilizan control de versiones en sus proyectos al renombrar las distintas versiones de un mismo archivo de varias formas como <code>blogScript.js</code>, <code>blogScript_v2.js</code>, <code>blogScript_v3.js</code>, <code>blogScript_final.js</code>, <code>blogScript_definite_final.js</code>, etc. Pero esta forma de abordarlo es propenso a errores y inefectivo para proyectos grupales.</p>
+                        <div class="estados-git">
+                        <h4>Estados de los archivos en Git</h4>
+                        <p>En Git hay tres etapas primarias (condiciones) en las cuales un archivo puede estar: <b>estado modificado</b>, <b>estado preparado</b>, o <b>estado confirmado</b>.</p>
+                        <h5>Estado modificado</h5>
+                        <p>Un archivo en el estado modificado es un archivo revisado – pero no acometido (sin registrar).</p>
+                        <p>Es decir, archivos en el estado modificado son archivos que has modificado pero no le has instruido explícitamente a Git que controle.</p>
+                        <h5>Estado preparado</h5>
+                        <p>Archivos en la etapa preparado son archivos modificados que han sido seleccionados – en su estado (versión) actual – y están siendo preparados para ser guardados (acometidos) al repositorio .git durante la próxima instantánea de confirmación.</p>
+                        <p>Una vez que el archivo está preparado implica que has explícitamente autorizado a Git que controle la versión de ese archivo.</p>
+                        <h5>Estado confirmado</h5>
+                        <p>Archivos en el estado confirmado son archivos que se guardaron en el repositorio .git exitosamente.</p>
+                        <p>Por lo tanto un archivo confirmado es un archivo en el cual has registrado su versión preparada en el directorio (carpeta) Git.</p>
+                    </div>
+                    <div class="ubicacion-archivos-git">
+                    <h4>Ubicación de archivos</h4>
+                    <p>Existen tres lugares principales donde pueden residir las versiones de un archivo cuando se hace control de versiones con Git: <b>el directorio de trabajo</b>, <b>el sector de preparación</b>, o <b>el directorio Git</b>. </p>
+                        <h5>Directorio de trabajo</h5>
+                        <p>El directorio de trabajo es una carpeta local para los archivos de un proyecto. Esto significa que cualquier carpeta creada en cualquier lugar en un sistema es un directorio de trabajo.</p>
+                        <p>Destacar que los archivos en el estado modificado residen dentro del directorio de trabajo.</p>
+                        <p>El directorio de trabajo es distinto al directorio <code>.git</code>. Es decir, tu creas un directorio de trabajo mientras que Git crea un directorio <code>.git</code>.</p>
+                        <h5>Zona de preparación</h5>
+                        <p>La zona de preparación – técnicamente llamado “index” en lenguaje Git  – es un archivo normalmente ubicado en el directory <code>.git</code>, que guarda información sobre archivos próximos a ser acometidos en el directorio <code>.git</code>.</p>
+                        <p>Los archivos en la etapa de preparación residen en la zona de preparación.</p>
+                        <h5>Directorio Git</h5>
+                        <p>El directorio <code>.git</code> es la carpeta (también llamada "repositorio") que Git crea dentro del directorio de trabajo que le has instruido para realizar un seguimiento.</p>
+                        <p>La carpeta <code>.git</code>  también es donde Git guarda las bases de datos de objetos y metadatos de los archivos que le hayas instruido realizar un monitoreo.</p>
+                        <p>El directorio <code>.git</code> es la vida de Git – es el item copiado cuando se clona un repositorio desde otra computadora (o desde una plataforma en línea como GitHub).</p>
+                        <p>Los archivos en el estado acometido residen en el directorio Git.</p>
+                    <h4>El flujo de trabajo básico de Git</h4>
+                    <p>El trabajar  con el Sistema de Control de Versiones Git se puede representar de la siguiente manera</p>
+                    <img src="../img/git-basic-flujo-trabajopng.png" alt="respresentacion grafica del flujo de trabajo">
+                    </div>
+                    <ol>
+                        <li>
+                            Modificar archivos en el directorio de trabajo.
+                            <br>
+                            Observe que cualqueir archivo que modifiques se convierte en un archivo en el <em>estado modificado</em>.
+                        </li>
+                        <li>
+                            Prepare selectivamente los archivos que quieras confirmar al directorio <code>Prepare selectivamente los archivos que quieras confirmar al directorio .git.</code>.
+                            <br>
+                            Observe que cualquier archivo que prepares (agregues) a la zona de preparación se convierte en un archivo en el <em>estado preparado</em>.
+                            <br>
+                            También tenga en cuenta que los archivos preparados todavía no están en la base de datos <code>.git</code>.
+                            <br>
+                            Preparar significa que la información sobre el archivo preparado se incluye en un archivo (llamado "index") en el repositorio <code>.git</code>.
+                        </li>
+                        <li>
+                            Confirme el/los archivos que has preparado en el directorio <code>.git</code>. Esto es, guardar de manera permanente una instantánea de los archivos preparados en la base de datos <code>.git</code>.
+                            <br>
+                            Observe que cualquier versión del archivo que confirmes al directorio <code>.git</code> se convierte en un archivo en el <em>estado confirmado</em>
+                        </li>
+                    </ol>
+                
+                <p>En resumen Git es un sistema de control de versiones genial para versionado, administración y distribución de archivos.</p>
+                <p>Ahora bien, si Git nos ayuda en la administración y distribución eficaz de distintas versiones de los archivos de un proyecto,  ¿cúal es el propósito de GitHub?</p>
+            </div>
+                </div>
+                <div class="github">
+                    <h2>GitHub</h2>
+                    <p>GitHub es una plataforma basada en la web donde los usuarios pueden alojar repositorios Git. Facilita compartir y colaborar fácilmente en proyectos con cualquier persona en cualquier momento.</p>
+                    <p>GitHub también fomenta una participación más amplia en proyectos Código Abierto al proporcionar una manera segura de editar archivos en repositorios de otros usuarios.</p>
+                    <p>Para alojar (o compartir) un repositorio Git en GigHub, siga los siguientes pasos:      </p>
+                    <div class="pasos-github">
+                        <!-- cada box sera un cuadrtado  en el cual tendra el contenido en caso de ser mucho contenido  se agregara una srcoll lateral para leer -->
+                            <div class="box">
+                                <div class="titulo">
+                                    <h3><strong>Paso 1: Registrar una cuenta de GitHub</strong></h3>
+                                </div>
+                                <div class="info">
+                                    <p>El primer paso para comenzar con el alojamiento en GitHub es crear una cuenta personal. Visite <a href="https://github.com/signup?source=login"> la página de registro oficial</a> para registrarse.</p>
+                                </div>
+                            </div>
+                        <div class="box">
+                            <div class="titulo">
+                                <h3><strong>Paso 2: Crear un repositorio remoto en GitHub</strong></h3>
+                            </div>
+                            <div class="info">
+                                <p>Después de registrarse, <a href="https://docs.github.com/es/get-started/quickstart/create-a-repo">crear un home (un repositorio) en GitHub</a>  para el repositorio Git que quieres compartir.</p>
+                            </div>
+                        </div>
+                        <div class="box">
+                            <div class="titulo">
+                                <h3><strong>Paso 3: Conectar el directorio Git del proyecto con el repositorio remoto</strong></h3>
+                            </div>
+                            <div class="info">
+                                <p>Una vez que hayas creado un repositorio remoto para tu proyecto, tienes que vincular el directorio <code>.git</code> del proyecto – ubicado localmente en tu sistema – con el repositorio remoto en GitHub.</p>
+                                <p>Para conectar con el repositorio remoto, debes <strong>ubicarte en el directorio raíz</strong> del proyecto que quieras compartir, utilizando tu terminal local, y ejecuta este comando:</p>
+                                <code>git remote add origin https://github.com/tuUsuario/tuRepositorio.git</code>
+                                <ul>
+                                    <li>Reemplaza code <code>tuUsuario</code> en el código de arriba con tu nombre de usuario de GitHub.
+                                        <br>
+                                        También reemplazar <code>tuRepositorio</code> con el nombre del repositorio remoto al que te quieres conectar.
+                                    </li>
+                                    <li>
+                                        El comando de arriba implica que <em>git</em> debe <em>agregar</em> al proyecto la URL especificada como una referencia remota con la cual el directorio local <code>.git</code> puede interactuar.
+                                    </li>
+                                    <li>
+                                        La opción <code>origin</code> en el comando de arriba es el nombre predeterminado (un nombre corto) que Git le otorga al servidor que aloja tu repositorio remoto.
+                                        <br>
+                                        Es decir, Git utiliza el nombre corto <code>origin</code> en vez de la URL del servidor.
+                                    </li>
+                                    <li>
+                                        No es obligatorio quedarse con el nombre predeterminado del servidor. Si prefieres otro nombre que <code>origin</code>, simplemente sustituya el nombre <code>origin</code> en el comando <code>git remote add</code> de arriba por cualquier nombre que prefieras.
+                                    </li>
+                                    <li>
+                                        Siempre recuerda que un nombre corto del servidor (por ejemplo, <code>origin</code>) no es nada especial! Sólo existe – localmente – para ayudarte a referenciar fácilmente la URL del servidor. Por lo tanto, siéntete libre de cambiarlo a un nombre corto que puedas referenciar fácilmente
+                                    </li>
+                                    <li>
+                                        Para renombrar cualquier URL remota que exista, utilice el comando git remote rename de esta manera:
+                                        <code>git remote rename nombreURLactual nuevoNombreURL</code>
+                                    </li>
+                                    <li>
+                                        Cada vez que clones (descargues) cualquier repo remota, Git automáticamente le pone nombre <code>origin</code> a la URL de la repo. Sin embargo, le puedes especificar un nombre distinto con el comando <code>git clone -o tuNombrePreferido</code>.
+                                    </li>
+                                    <li>
+                                    Para ver la URL exacta guardada para los nombres como <code>origin</code>, ejecuta el comando <code>git remote -v</code>.
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="box">
+                            <div class="titulo">
+                                <h3><strong>Paso 4: Confirmar la conexión</strong></h3>
+                            </div>
+                            <div class="info">
+                                <p>Una vez que hayas conectado tu directorio Git con el repositorio remoto, verifica si la conexión fue exitosa ejecutando el comando <code>git remote -vgit remote -v</code>.</p>
+                                <p>Después verifica la impresión para confirmar que la URL mostrada sea la misma que la URL remota que intentas conectarte.</p>
+                            </div>
+                        </div>
+                        <div class="box">
+                            <div class="titulo">
+                                <h3><strong>Paso 5: Subir un repo Git local a un repo remoto</strong></h3>
+                            </div>
+                            <div class="info">
+                                    <p>Después de conectar exitosamente tu directorio local con el repositorio remoto puedes comenzar a subir (cargar) tu proyecto local upstream.</p>
+                                    <p>Cuando estés listo para compartir tu proyecto en otra parte, en cualquier repo remoto, simplemente le dices a Git que suba todos tus confirmaciones, ramas y archivos en tu directorio <code>.git</code> local al repositorio remoto.</p>
+                                    <p>La sintaxis del código utilizado para subir (push) un directorio local Git a un repositorio remoto es <code>git push -u nombreRemoto nombreRama</code>.</p>
+                                    <p>Esto es, para subir tu directorio local <code>.git</code> y suponiendo que el nombre corto de la URL remota es “origin”, ejecuta:</p>
+                                    <code>git push -u origin master</code>
+                                <ul>
+                                    <li>
+                                        El comando de arriba implica que git debe subir tu rama master local a la rama master remota ubicada en la URL con nombre origin.
+                                    </li>
+                                    <li>
+                                        Técnicamente puedes sustituir la opción <code>origin</code> con la URL del repositorio remoto. Recuerda, la opción <code>origin</code> es solo un nombre de la URL que hayas registrado en tu directorio <code>.git</code> local.
+                                    </li>
+                                    <li>
+                                        El indicador <code>-u</code> (indicador de referencia upstream/seguimiento) automáticamente vincula la rama local del directorio <code>.git</code> con la rama remota. Esto te permite usar <code>git pull</code> sin ningún argumento.
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="box">
+                            <div class="titulo">
+                                <h3><strong>Paso 6: Confirmar la subida</strong></h3>
+                            </div>
+                            <div class="info">
+                                <p>Por último, vuelve a tu página de repositorio GitHub para confirmar que Git haya subido exitosamente tu directorio Git local al repositorio remoto.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="publicacion">
+                        <h3>Publica tu página web con GitHub pages</h3>
+                        <p>Después de subir tu proyecto al repositorio remoto, fácilmente puedes publicarlo en la web de esta forma:</p>
+                        <ol>
+                            <li>Asegurate que el nombre del archivo principal HTML de tu proyecto sea <code>index.html</code>.
+                            </li>
+                            <li>En el sitio web de la plataforma GitHub ingresa al repositorio del proyecto que quieres publicar y haz click en la <strong>pestaña settings</strong>.
+                            </li>
+                            <li>Desplaza hacia la sección <strong>GitHub Pages</strong> y cambia la rama <strong>Source</strong> de <strong>none</strong> a <strong>master</strong>.
+
+                            </li>
+                            <li>Después aparecerá una notificación que dice <em>“Your site is published at https://your-username.github.io/your-github-repo-name/”</em>.
+
+                            </li>
+                            <li>Ahora puedes ver – y publicitar – tu proyecto en la URL especificada.
+
+                            </li>
+                        </ol>
+                        <p>Esta sección solo ha comenzado a tratar el tema de publicar tu proyecto con GitHub. Para aprender más sobre GitHub pages, echa un vistazo a la <a href="https://docs.github.com/es/pages">documentación oficial de GitHub</a> que habla sobre pages.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
